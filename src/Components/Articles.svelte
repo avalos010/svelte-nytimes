@@ -3,8 +3,8 @@
   export let articles;
 </script>
 
-<main>
+<div class="flex flex-row flex-wrap justify-center">
   {#each articles as article}
     <Article {article} />
   {/each}
-</main>
+</div>
