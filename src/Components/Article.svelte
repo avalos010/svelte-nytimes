@@ -1,12 +1,12 @@
 <script>
   export let article;
-  const image = article.media[0]["media-metadata"]
+  const image = article.media[0]
     ? article.media[0]["media-metadata"][1].url
-    : null;
+    : "https://clients.cylindo.com/viewer/3.x/v3.0/documentation/img/not_found.gif";
 </script>
 
 <div class="w-4/5 flex p-2 m-4 shadow shadow-gray-700 hover:shadow-lg">
-  <img src={image} alt={article.title} />
+  <img src={image} alt={article.title} width="210" height="140" />
   <div class=" mt-1 ml-3">
     <h3 class="text-slate-800 text-lg">{article.title}</h3>
     <p class="text-sm text-slate-900">{article.abstract}</p>
