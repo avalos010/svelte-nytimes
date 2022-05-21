@@ -7,6 +7,5 @@
   <!-- {console.log(articles)} -->
   {#each articles as article}
     <Article {article} />
-    <p>{article.uri}</p>
   {/each}
 </div>
