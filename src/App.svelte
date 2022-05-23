@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import { getPopularArticles } from "./Api/index";
   import Articles from "./Components/Articles.svelte";
+  import Search from "./Components/Search.svelte";
   import Navigation from "./Components/Navigation.svelte";
   import { Router, Route, Link } from "svelte-navigator";
 
@@ -17,10 +18,10 @@
   <Navigation />
   <Route path="/">
     <h2 class="text-center text-slate-700 text-lg">Most Popular Articles</h2>
-    <Articles {articles} />
+    <Articles {articles} isSearch={false} />
   </Route>
   <Route path="search">
-    <p>Search articles</p>
+    <Search />
   </Route>
   <Route>
     <h3>Default</h3>
