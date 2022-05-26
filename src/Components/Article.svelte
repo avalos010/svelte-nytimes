@@ -1,10 +1,9 @@
 <script>
-  import { onMount } from "svelte";
   export let article, isSearch;
 
   const image = isSearch
-    ? article.multimedia[0]
-      ? `https://nytimes.com/${article.multimedia[0].url};`
+    ? !!article.multimedia.length
+      ? `https://nytimes.com/${article.multimedia[0].url}`
       : "https://clients.cylindo.com/viewer/3.x/v3.0/documentation/img/not_found.gif"
     : article.media[0]
     ? article.media[0]["media-metadata"][1].url
